@@ -64,4 +64,4 @@ int len = GetNumber(Console.ReadLine() ?? "");
 double[] array = InitArray(len);
 
 PrintArray(array);
-Console.WriteLine($"разность максимально и минимального элементов массива = {FindDiff(array)}");
+Console.WriteLine($"Разность максимального и минимального элементов массива = {FindDiff(array)}");
