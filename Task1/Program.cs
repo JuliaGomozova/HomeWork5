@@ -62,7 +62,6 @@ int CountEven(int[] array)
 Console.WriteLine("Введите колличество элементов массива");
 int len = GetNumber(Console.ReadLine() ?? "");
 int[] array = InitArray(len);
-//int count = ;
 
 PrintArray(array);
 Console.WriteLine($"Количество четных элементов в массиве = {CountEven(array)}");
