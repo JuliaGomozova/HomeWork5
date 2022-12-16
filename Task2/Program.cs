@@ -30,7 +30,7 @@ int[] InitArray(int len)
 
     for (int i = 0; i < len; i++)
     {
-        array[i] = rnd.Next(100, 1000);
+        array[i] = rnd.Next(0, 50);
     }
     return array;
 }
@@ -42,6 +42,24 @@ void PrintArray(int[] array)
     {
         Console.Write($"{array[i]} ");
     }
-
     Console.WriteLine();
 }
+
+int GetSum(int[] array)
+{
+    int sum = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if( i % 2 == 0)
+            sum += array[i];
+    }
+    return sum;
+}
+
+
+Console.WriteLine("Введите колличество элементов массива");
+int len = GetNumber(Console.ReadLine() ?? "");
+int[] array = InitArray(len);
+
+PrintArray(array);
+Console.WriteLine($"сумма элементов на четных позициях = {GetSum(array)}");
